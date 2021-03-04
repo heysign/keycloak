@@ -453,8 +453,8 @@ public class LoginActionsService {
         if (changeRedirectUrl){
 //            String baseUrl = session.getContext().getUri().getBaseUri().toString();
 //            String requestUrl = session.getContext().getUri().getRequestUri().toString();
-            String instsignHomeUrl = Urls.getInstsignHomeUrl(session.getContext().getUri().getBaseUri(), session.getContext().getUri().getRequestUri());
-            redirectUri = instsignHomeUrl;
+            String heysignHomeUrl = Urls.getHeysignHomeUrl(session.getContext().getUri().getBaseUri(), session.getContext().getUri().getRequestUri());
+            redirectUri = heysignHomeUrl;
         }
         authSession.setRedirectUri(redirectUri);
         authSession.setClientNote(OIDCLoginProtocol.RESPONSE_TYPE_PARAM, OAuth2Constants.CODE);

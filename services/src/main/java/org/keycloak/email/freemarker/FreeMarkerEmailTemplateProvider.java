@@ -170,8 +170,8 @@ public class FreeMarkerEmailTemplateProvider implements EmailTemplateProvider {
     }
 
     protected void addCommonAttributes(Map<String, Object> attributes, String buttonLink) {
-        attributes.put("homeUrl", "https://app.instsign.com");
-        attributes.put("documentUrl", "https://app.instsign.com/my-document/inbox");
+        attributes.put("homeUrl", "https://app.heysign.com");
+        attributes.put("documentUrl", "https://app.heysign.com/my-document/inbox");
         String name = "";
         if (user.getLastName() != null && !user.getLastName().isEmpty()) {
             name += user.getLastName();

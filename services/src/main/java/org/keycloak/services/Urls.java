@@ -279,10 +279,10 @@ public class Urls {
         return UriBuilder.fromUri(baseUri).path(ThemeResource.class);
     }
 
-  public static String getInstsignHomeUrl(URI baseURI, URI actionuri) {
+  public static String getHeysignHomeUrl(URI baseURI, URI actionuri) {
     String baseUrl = baseURI != null ? baseURI.toString() : "";
     String actionUrl = actionuri != null ? actionuri.toString() : "";
-    String domainSuffix = "instsign.com";
+    String domainSuffix = "heysign.com";
     String localhostDomain = "localhost";
     String homeUrl = "";
     if (actionUrl.contains(domainSuffix) || actionUrl.contains(localhostDomain)) {

@@ -1,0 +1,165 @@
+
+.heysign-content-login {
+}
+
+
+.heysign-login-social-links {
+  margin-top: 30px;
+  height: 120px;
+  height: 130px;
+}
+
+.heysign-login-social-link-text {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3px;
+  margin-left: 20px;
+  width: auto;
+  height: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.heysign-login-social-link-group {
+  margin-left: calc(50% - 110px);
+  /*margin-left: 0;*/
+}
+
+.heysign-login-social-link {
+  font-size: 14px;
+  width: 220px;
+  height: 40px;
+  padding: 11px;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.heysign-login-social-link-img{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.heysign-login-social-link-naver {
+  vertical-align: top;
+  margin-left: 0;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.heysign-login-social-link-naver-svg {
+  background: url("../img/naver-btn.svg") no-repeat center center;
+}
+
+.heysign-login-social-link-kakao {
+  vertical-align: top;
+  margin-left: 0;
+  margin-top: 10px;
+  background-color: #fae100;
+}
+
+.heysign-login-social-link-kakao-svg {
+  background: url("../img/kakao-btn.svg") no-repeat center center;
+
+}
+
+.heysign-login-social-link-google {
+  vertical-align: top;
+  margin-left: 0;
+  background-color: #ffffff;
+}
+
+.heysign-login-social-link-google-svg {
+  background: url("../img/google-btn.svg") no-repeat center center;
+}
+
+.heysign-login-social-link-facebook {
+  vertical-align: top;
+  margin-left: 0;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.heysign-login-social-link-facebook-svg {
+  background: url("../img/facebook-btn.svg") no-repeat center center;
+}
+
+.heysign-content-or {
+  width: 100%;
+  margin-top: 37px;
+}
+@media (max-width:450px){
+  .heysign-content-or .heysign-content-or-divider {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    width: 85px;
+    height: 1px;
+    border: solid 1px #d1d6e2;
+  }
+}
+@media (min-width:450px) {
+  .heysign-content-or .heysign-content-or-divider {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    width: 165px;
+    height: 1px;
+    border: solid 1px #d1d6e2;
+  }
+}
+
+.heysign-content-or .heysign-content-or-text {
+  margin-left: 22px;
+  margin-right: 22px;
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.heysign-login-forgot-password {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.heysign-login-forgot-id {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.heysign-login-register {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  float: right;
+  height: 14px;
+  font-family: NanumSquareOTFB, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.88;
+  letter-spacing: normal;
+  color: #275ae6;
+}
+.heysign-login-register:hover{
+  cursor: pointer;
+}

@@ -108,7 +108,7 @@ public class UrlBean {
     }
 
     public String getHomeUrl() {
-        return Urls.getInstsignHomeUrl(baseURI, actionuri);
+        return Urls.getHeysignHomeUrl(baseURI, actionuri);
     }
 
 }
