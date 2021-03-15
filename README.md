@@ -79,7 +79,7 @@ Before contributing to Keycloak please read our [contributing guidelines](CONTRI
     cd testsuite/utils
     mvn clean package
     mvn exec:java -Pkeycloak-server -Dresources -Pkeycloak.theme.dir="../../themes/src/main/resources/theme"
-    mvn exec:java -Pkeycloak-server -Dresources -Pkeycloak.theme.dir="../../themes/src/main/resources/theme" -Dimport="../../../signus-service/src/main/docker/realm-config/heysign-realm.json"
+    mvn exec:java -Pkeycloak-server -Dresources -Pkeycloak.theme.dir="../../themes/src/main/resources/theme" -Dimport="../../../heysign-service/src/main/docker/realm-config/heysign-realm.json"
     Use following url for debugging: http://localhost:8081/auth/realms/heysign/account
 
 ## intellij debug setting
@@ -88,9 +88,9 @@ Before contributing to Keycloak please read our [contributing guidelines](CONTRI
 #### set working directory:
     keycloak/testsuite/utils
 #### set command line:
-    exec:java -Dresources -Pkeycloak.theme.dir=../../themes/src/main/resources/theme "-Dimport=../../../signus-service/src/main/docker/realm-config/heysign-realm.json"
+    exec:java -Dresources -Pkeycloak.theme.dir=../../themes/src/main/resources/theme "-Dimport=../../../heysign-service/src/main/docker/realm-config/heysign-realm.json"
 #### set profiles:
     keycloak-server
 
 ## command line
-    mvn exec:java -Pkeycloak-server -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=dir -Dkeycloak.migration.dir=./realm-config -Dkeycloak.migration.strategy=OVERWRITE_EXISTING -Djboss.socket.binding.port-offset=1000 -Djboss.as.management.blocking.timeout=6000 -Dkeycloak.port=9080 -Dkeycloak.connectionsJpa.driver=com.mysql.jdbc.Driver -Dkeycloak.connectionsJpa.password=heysign2020!1 -Dkeycloak.connectionsJpa.user=hsuser -Dresources -Pkeycloak.theme.dir="../../themes/src/main/resources/theme" -Dimport="../../../signus-service/src/main/docker/realm-config/heysign-realm.json" -Dkeycloak.connectionsJpa.url="jdbc:mysql://localhost:3316/keycloak?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Seoul&createDatabaseIfNotExist=true"
+    mvn exec:java -Pkeycloak-server -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=dir -Dkeycloak.migration.dir=./realm-config -Dkeycloak.migration.strategy=OVERWRITE_EXISTING -Djboss.socket.binding.port-offset=1000 -Djboss.as.management.blocking.timeout=6000 -Dkeycloak.port=9080 -Dkeycloak.connectionsJpa.driver=com.mysql.jdbc.Driver -Dkeycloak.connectionsJpa.password=heysign2020!1 -Dkeycloak.connectionsJpa.user=hsuser -Dresources -Pkeycloak.theme.dir="../../themes/src/main/resources/theme" -Dimport="../../../heysign-service/src/main/docker/realm-config/heysign-realm.json" -Dkeycloak.connectionsJpa.url="jdbc:mysql://localhost:3316/keycloak?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Asia/Seoul&createDatabaseIfNotExist=true"

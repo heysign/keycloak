@@ -383,6 +383,7 @@
 
         function checkValid() {
           const registerButton = $('#register-button')[0];
+          console.log('registerButton checkValid',isValid1,isValid2,isValid3,isValid4,isValid5,isValid6,isValid7,isValid8,isValid9);
           if (isValid1 && isValid2 && isValid3 && isValid4 && isValid5 && isValid5 && isValid6
               && isValid7 && isValid8 && isValid9) {
             registerButton?.classList.remove('heysign-button-disabled');
@@ -466,13 +467,13 @@
         $("#password").keyup(function () {
           const inputElement = $('#password')[0];
           const inputValue = inputElement.value;
-          if (validatePassword(inputElement) === 3 || inputValue === undefined || inputValue
+          if (validatePassword(inputElement) >= 3 || inputValue === undefined || inputValue
               === null
               || inputValue.length === 0) {
             inputElement.className = '';
             if (inputElement.nextElementSibling !== null) {
             }
-            isValid2 = validatePassword(inputElement) === 3;
+            isValid2 = validatePassword(inputElement) >= 3;
           } else {
             inputElement.className = 'heysign-error';
             if (inputElement.nextElementSibling === null) {
