@@ -36,10 +36,8 @@
     <!-- Google Tag Manager -->
     <script>
       console.log('window.location.host:' + window.location.host, navigator.userAgent);
-      if (window.location.host === "app.heysign.com" ||
-          window.location.host === "auth.heysign.com" ||
-          window.location.host === "app2.heysign.com" ||
-          window.location.host === "auth2.heysign.com") {
+      if (window.location.host === "app.heysign.co.kr" ||
+          window.location.host === "auth.heysign.co.kr") {
         (function (w, d, s, l, i) {
           w[l] = w[l] || [];
           w[l].push({
@@ -65,14 +63,12 @@
 
       function getHeySignHomeUrl() {
         var url = window.location.href;
-        if (url.includes("authtest.heysign.com")) {
-          return "https://test.heysign.com";
-        } else if (url.includes("authdemo.heysign.com")) {
-          return "https://demo.heysign.com";
-        } else if (url.includes("auth.heysign.com")) {
-          return "https://app.heysign.com";
-        } else if (url.includes("auth2.heysign.com")) {
-          return "https://app2.heysign.com";
+        if (url.includes("authtest.heysign.co.kr")) {
+          return "https://test.heysign.co,kr";
+        } else if (url.includes("authdemo.heysign.co.kr")) {
+          return "https://demo.heysign.co.kr";
+        } else if (url.includes("auth.heysign.co.kr")) {
+          return "https://app.heysign.co.kr";
         } else {
           return "http://localhost:8080";
         }

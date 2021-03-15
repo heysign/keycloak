@@ -282,7 +282,7 @@ public class Urls {
   public static String getHeysignHomeUrl(URI baseURI, URI actionuri) {
     String baseUrl = baseURI != null ? baseURI.toString() : "";
     String actionUrl = actionuri != null ? actionuri.toString() : "";
-    String domainSuffix = "heysign.com";
+    String domainSuffix = "heysign.co.kr";
     String localhostDomain = "localhost";
     String homeUrl = "";
     if (actionUrl.contains(domainSuffix) || actionUrl.contains(localhostDomain)) {

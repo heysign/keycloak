@@ -125,7 +125,7 @@
                    class="small-agreement-checkbox-checked-svg heysign-content-hide"></div>
             </div>
             <input id="serviceAgreement" name="serviceAgreement" type="hidden">
-            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.com/policy/service.html', 800, 800)">
+            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.co.kr/policy/service.html', 800, 800)">
               <span>${msg("register-content-service-agreement")}</span>
             </div>
           </div>
@@ -136,7 +136,7 @@
                    class="small-agreement-checkbox-checked-svg heysign-content-hide"></div>
             </div>
             <input id="privacyAgreement" name="privacyAgreement" type="hidden">
-            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.com/policy/privacy.html', 800, 800)">
+            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.co.kr/policy/privacy.html', 800, 800)">
               <span>${msg("register-content-privacy-agreement")}</span>
             </div>
           </div>
@@ -147,7 +147,7 @@
                    class="small-agreement-checkbox-checked-svg heysign-content-hide"></div>
             </div>
             <input id="marketingAgreement" name="marketingAgreement" type="hidden">
-            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.com/policy/marketing.html', 800, 800)">
+            <div class="register-agreement-text-small" onclick="openNewWindows('https://www.heysign.co.kr/policy/marketing.html', 800, 800)">
               <span>${msg("register-content-marketing-agreement")}</span>
             </div>
           </div>

@@ -130,7 +130,7 @@
             </div>
             <input id="serviceAgreement" name="serviceAgreement" type="hidden">
             <div class="register-agreement-text-small"
-                 onclick="openNewWindows('https://www.heysign.com/service/', 800, 800)">
+                 onclick="openNewWindows('https://www.heysign.co.kr/service/', 800, 800)">
               <span>${msg("register-content-service-agreement")}</span>
             </div>
           </div>
@@ -142,7 +142,7 @@
             </div>
             <input id="privacyAgreement" name="privacyAgreement" type="hidden">
             <div class="register-agreement-text-small"
-                 onclick="openNewWindows('https://www.heysign.com/privacy/', 800, 800)">
+                 onclick="openNewWindows('https://www.heysign.co.kr/privacy/', 800, 800)">
               <span>${msg("register-content-privacy-agreement")}</span>
             </div>
           </div>
@@ -154,7 +154,7 @@
             </div>
             <input id="marketingAgreement" name="marketingAgreement" type="hidden">
             <div class="register-agreement-text-small"
-                 onclick="openNewWindows('https://www.heysign.com/agreement-marketing/', 800, 800)">
+                 onclick="openNewWindows('https://www.heysign.co.kr/agreement-marketing/', 800, 800)">
               <span>${msg("register-content-marketing-agreement")}</span>
             </div>
           </div>
