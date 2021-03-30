@@ -102,7 +102,7 @@
     }
 
     .email-title-2 {
-      color: #275ae6;
+      color: #ff593b;
     }
 
     .email-subtitle {
@@ -135,7 +135,7 @@
 
     .email-button-container .email-main-button {
       border-radius: 2px;
-      background-color: #275ae6;
+      background-color: #ff593b;
       margin: 0;
       padding: 13px 19px;
       width: 100%;
@@ -272,7 +272,7 @@
     <div class="email-button-container width-100" style="margin: 40px 30px 30px 30px; display: inline-block; text-align: center; height: 40px; width: 100px;">
       <a href="${mainButtonUrl}"
          target="_blank2">
-        <div class="email-main-button" style="border-radius: 2px; background-color: #275ae6; margin: 0; padding: 13px 19px; width: 100%; height: 14px; font-size: 14px; font-weight: 700; font-stretch: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-align: center; color: #ffffff;">
+        <div class="email-main-button" style="border-radius: 2px; background-color: #ff593b; margin: 0; padding: 13px 19px; width: 100%; height: 14px; font-size: 14px; font-weight: 700; font-stretch: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-align: center; color: #ffffff;">
           <span>${msg("emailVerificationButton")?no_esc}</span>
         </div>
       </a>
