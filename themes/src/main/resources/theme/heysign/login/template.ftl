@@ -38,19 +38,33 @@
       console.log('window.location.host:' + window.location.host, navigator.userAgent);
       if (window.location.host === "app.heysign.co.kr" ||
           window.location.host === "auth.heysign.co.kr") {
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-          });
-          var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src =
-              'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5FQ8XCZ');
+
+        // (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        //       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        //     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        //     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        // })(window,document,'script','dataLayer','GTM-123');
+
+        var newScript = document.createElement("script");
+        newScript.type = "text/javascript";
+        newScript.setAttribute("async", "true");
+        newScript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-FQ0HPGWL4V");
+        document.documentElement.firstChild.appendChild(newScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FQ0HPGWL4V');
+
+
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2363464,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       }
     </script>
     <!-- End Google Tag Manager -->
@@ -599,21 +613,19 @@
 
   <body>
   <script>
-    (function () {
+    (function() {
       var w = window;
       if (w.ChannelIO) {
-        return (window.console.error || window.console.log || function () {
-        })('ChannelIO script included twice.');
+        return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
       }
-      var ch = function () {
+      var ch = function() {
         ch.c(arguments);
       };
       ch.q = [];
-      ch.c = function (args) {
+      ch.c = function(args) {
         ch.q.push(args);
       };
       w.ChannelIO = ch;
-
       function l() {
         if (w.ChannelIOInitialized) {
           return;
@@ -627,7 +639,6 @@
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
       }
-
       if (document.readyState === 'complete') {
         l();
       } else if (window.attachEvent) {
@@ -638,7 +649,7 @@
       }
     })();
     ChannelIO('boot', {
-      "pluginKey": "d917e7a6-9a87-41a7-9058-cb3140094ce8"
+      "pluginKey": "f6c60dea-3acd-447a-82b8-f07f48c45ca5"
     });
   </script>
   <div class="heysign-main">
