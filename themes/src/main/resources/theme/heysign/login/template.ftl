@@ -78,7 +78,7 @@
       function getHeySignHomeUrl() {
         var url = window.location.href;
         if (url.includes("authtest.heysign.co.kr")) {
-          return "https://test.heysign.co,kr";
+          return "https://test.heysign.co.kr";
         } else if (url.includes("authdemo.heysign.co.kr")) {
           return "https://demo.heysign.co.kr";
         } else if (url.includes("auth.heysign.co.kr")) {
