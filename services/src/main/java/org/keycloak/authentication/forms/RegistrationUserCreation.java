@@ -153,9 +153,9 @@ public class RegistrationUserCreation implements FormAction, FormActionFactory {
 
         populateFormFields(context.getHttpRequest(), user, formData);
 
-        for(Map.Entry<String, List<String>> entry: user.getAttributes().entrySet()){
-            logger.info(entry.getKey()+":"+entry.getValue());
-        }
+//        for(Map.Entry<String, List<String>> entry: user.getAttributes().entrySet()){
+//            logger.debug(entry.getKey()+":"+entry.getValue());
+//        }
         context.getAuthenticationSession().setClientNote(OIDCLoginProtocol.LOGIN_HINT_PARAM, username);
         AttributeFormDataProcessor.process(formData, context.getRealm(), user);
         context.setUser(user);
