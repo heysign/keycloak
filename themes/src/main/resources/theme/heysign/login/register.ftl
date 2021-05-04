@@ -174,21 +174,56 @@
       <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
         <span>${msg("register-login-link")}</span>
       </div>
-<#--      <div class="heysign-content-or margin-bottom-10">-->
-<#--        <div class="heysign-content-or-divider">-->
-<#--        </div>-->
-<#--        <div class="heysign-content-or-text">-->
-<#--          <span>or</span>-->
-<#--        </div>-->
-<#--        <div class="heysign-content-or-divider">-->
-<#--        </div>-->
-<#--      </div>-->
-<#--        <#if realm.password && social.providers??>-->
-<#--          <div class="heysign-login-social-link-group">-->
+      <div class="heysign-content-or margin-bottom-10">
+        <div class="heysign-content-or-divider">
+        </div>
+        <div class="heysign-content-or-text">
+          <span>or</span>
+        </div>
+        <div class="heysign-content-or-divider">
+        </div>
+      </div>
+        <#if realm.password && social.providers??>
+          <div class="heysign-login-social-link-group">
+              <#list social.providers as p>
+                  <#if p.alias == "google">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      </div>
+                      <div class="heysign-login-social-link-text">
+                        <span>${msg("login-social-${p.alias}")}</span>
+                      </div>
+                    </div>
+                  </#if>
+              </#list>
+              <#list social.providers as p>
+                  <#if p.alias == "kakao">
+                    <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                         onclick="goToUrl('${p.loginUrl}')">
+                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      </div>
+                      <div class="heysign-login-social-link-text">
+                        <span>${msg("login-social-${p.alias}")}</span>
+                      </div>
+                    </div>
+                  </#if>
+              </#list>
+              <#list social.providers as p>
+                  <#if p.alias == "naver">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      </div>
+                      <div class="heysign-login-social-link-text">
+                        <span>${msg("login-social-${p.alias}")}</span>
+                      </div>
+                    </div>
+                  </#if>
+              </#list>
 <#--              <#list social.providers as p>-->
-<#--                  <#if p.alias == "google">-->
-<#--                    <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"-->
-<#--                         onclick="displayAlert('${msg("alert-preparing")}')">-->
+              <#--                    <#if p.alias == "facebook">-->
+              <#--                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">-->
 <#--                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">-->
 <#--                      </div>-->
 <#--                      <div class="heysign-login-social-link-text">-->
@@ -197,43 +232,8 @@
 <#--                    </div>-->
 <#--                  </#if>-->
 <#--              </#list>-->
-<#--              <#list social.providers as p>-->
-<#--                  <#if p.alias == "kakao">-->
-<#--                    <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"-->
-<#--                         onclick="goToUrl('${p.loginUrl}')">-->
-<#--                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">-->
-<#--                      </div>-->
-<#--                      <div class="heysign-login-social-link-text">-->
-<#--                        <span>${msg("login-social-${p.alias}")}</span>-->
-<#--                      </div>-->
-<#--                    </div>-->
-<#--                  </#if>-->
-<#--              </#list>-->
-<#--              <#list social.providers as p>-->
-<#--                  <#if p.alias == "naver">-->
-<#--                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"-->
-<#--                           onclick="goToUrl('${p.loginUrl}')">-->
-<#--                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">-->
-<#--                      </div>-->
-<#--                      <div class="heysign-login-social-link-text">-->
-<#--                        <span>${msg("login-social-${p.alias}")}</span>-->
-<#--                      </div>-->
-<#--                    </div>-->
-<#--                  </#if>-->
-<#--              </#list>-->
-<#--              &lt;#&ndash;                <#list social.providers as p>&ndash;&gt;-->
-<#--              &lt;#&ndash;                    <#if p.alias == "facebook">&ndash;&gt;-->
-<#--              &lt;#&ndash;                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">&ndash;&gt;-->
-<#--              &lt;#&ndash;                        <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">&ndash;&gt;-->
-<#--              &lt;#&ndash;                        </div>&ndash;&gt;-->
-<#--              &lt;#&ndash;                        <div class="heysign-login-social-link-text">&ndash;&gt;-->
-<#--              &lt;#&ndash;                          <span>${msg("login-social-${p.alias}")}</span>&ndash;&gt;-->
-<#--              &lt;#&ndash;                        </div>&ndash;&gt;-->
-<#--              &lt;#&ndash;                      </div>&ndash;&gt;-->
-<#--              &lt;#&ndash;                    </#if>&ndash;&gt;-->
-<#--              &lt;#&ndash;                </#list>&ndash;&gt;-->
-<#--          </div>-->
-<#--        </#if>-->
+          </div>
+        </#if>
     </div>
   </form>
 </@layout.registrationLayout>
