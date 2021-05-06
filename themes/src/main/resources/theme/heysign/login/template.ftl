@@ -430,7 +430,12 @@
         $('#register-button').on('click', this, function (event) {
           if (isValid1 && isValid2 && isValid3 && isValid4 && isValid5 && isValid5 && isValid6
               && isValid7 && isValid8 && isValid9) {
-            registerSubmit('kc-register-form');
+            var updateProfileForm = document.getElementById('kc-update-profile-form');
+            if (updateProfileForm) {
+              registerSubmit('kc-update-profile-form');
+            } else {
+              registerSubmit('kc-register-form');
+            }
           }
         });
 
