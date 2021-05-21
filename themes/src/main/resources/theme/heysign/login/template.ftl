@@ -81,6 +81,8 @@
           return "https://test.heysign.co.kr";
         } else if (url.includes("authdemo.heysign.co.kr")) {
           return "https://demo.heysign.co.kr";
+        } else if (url.includes("auth2.heysign.co.kr")) {
+          return "https://app2.heysign.co.kr";
         } else if (url.includes("auth.heysign.co.kr")) {
           return "https://app.heysign.co.kr";
         } else {
