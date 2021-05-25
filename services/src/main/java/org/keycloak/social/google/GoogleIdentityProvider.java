@@ -43,7 +43,7 @@ public class GoogleIdentityProvider extends OIDCIdentityProvider implements Soci
     public static final String AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
     public static final String TOKEN_URL = "https://oauth2.googleapis.com/token";
     public static final String PROFILE_URL = "https://openidconnect.googleapis.com/v1/userinfo";
-    public static final String DEFAULT_SCOPE = "openid profile email ../auth/user.phonenumbers.read ../auth/user.birthday.read ../auth/user.gender.read ";
+    public static final String DEFAULT_SCOPE = "openid profile email";
 
     private static final String OIDC_PARAMETER_HOSTED_DOMAINS = "hd";
     private static final String OIDC_PARAMETER_ACCESS_TYPE = "access_type";
