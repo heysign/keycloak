@@ -32,8 +32,9 @@
             <div class="heysign-content-subtitle">
                 ${msg("find-email-content-subtitle")?no_esc}
             </div>
-            <div class="heysign-content-input-group margin-top-30">
-                <div class="heysign-content-input-label">
+            <div class="heysign-divider"></div>
+            <div class="heysign-content-input-group">
+                <div class="heysign-content-input-label margin-left-20">
                     <span>${msg("find-email-content-name")}</span>
                 </div>
                 <div class="heysign-content-input-text">
@@ -45,8 +46,9 @@
                            placeholder="${msg("heysign-content-name-placeholder")}"/>
                 </div>
             </div>
-            <div class="heysign-content-input-group margin-top-20">
-                <div class="heysign-content-input-label">
+            <div class="heysign-divider"></div>
+            <div class="heysign-content-input-group">
+                <div class="heysign-content-input-label margin-left-20">
                     <span>${msg("find-email-content-mobile-phone-number")}</span>
                 </div>
                 <div class="heysign-content-input-text">
@@ -58,12 +60,13 @@
                            placeholder="${msg("heysign-content-mobile-phone-number-placeholder")}"/>
                 </div>
             </div>
-            <div id="submitDiv" class="heysign-button heysign-content-disabled" onclick="validateAndSubmit('kc-find-email-form')">
-                <span>${msg("find-email-button")}</span>
-            </div>
-            <div class="heysign-content-footer">
+            <div class="heysign-divider"></div>
+            <div class="heysign-content-footer margin-bottom-20">
                 <div class="heysign-link-text heysign-content-footer-login" onclick="goToUrl('${url.loginUrl}')">
                     <span>${msg("heysign-go-back-to-login-link")}</span>
+                </div>
+                <div id="submitDiv" class="heysign-button heysign-button-disabled margin-left-336" onclick="validateAndSubmit('kc-find-email-form')">
+                    <span>${msg("find-email-button")}</span>
                 </div>
             </div>
         </div>

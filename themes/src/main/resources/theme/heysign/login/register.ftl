@@ -15,9 +15,9 @@
       <div class="heysign-content-title">
           ${msg("register-content-title")}
       </div>
-      <br/>
-      <div class="heysign-content-input-group margin-top-30">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group ">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-email")}</span>
         </div>
         <div class="heysign-content-input-text">
@@ -28,11 +28,10 @@
                  placeholder="${msg("heysign-content-email-placeholder")}"/>
         </div>
       </div>
-      <div class="heysign-content-input-group margin-top-20">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-password")}</span>
-          <span
-              class="register-content-label-password-description">${msg("register-content-password-description")}</span>
         </div>
         <div class="heysign-content-input-text">
           <input id="password" name="password" type="password" autocomplete="new-password"
@@ -50,9 +49,15 @@
             </div>
           </div>
         </div>
+        <div class="heysign-flex-br"></div>
+        <div class="heysign-content-input-description">
+            <span
+                class="register-content-label-password-description">${msg("register-content-password-description")}</span>
+        </div>
       </div>
-      <div class="heysign-content-input-group margin-top-20">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group ">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-name")}</span>
         </div>
         <div class="heysign-content-input-text">
@@ -62,8 +67,9 @@
                  placeholder="${msg("heysign-content-name-placeholder")}"/>
         </div>
       </div>
-      <div class="heysign-content-input-group margin-top-20">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-mobile-phone-number")}</span>
         </div>
         <div class="heysign-content-input-text">
@@ -74,8 +80,9 @@
                  placeholder="${msg("heysign-content-mobile-phone-number-placeholder")}"/>
         </div>
       </div>
-      <div class="heysign-content-input-group margin-top-20">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group ">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-company")}</span>
         </div>
         <div class="heysign-content-input-text">
@@ -86,14 +93,15 @@
                  placeholder="${msg("heysign-content-company-placeholder")}"/>
         </div>
       </div>
-      <div class="heysign-content-input-group margin-top-20">
-        <div class="heysign-content-input-label">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-input-group ">
+        <div class="heysign-content-input-label margin-left-20">
           <span>${msg("register-content-referral-code")}</span>
         </div>
         <div class="heysign-content-input-text">
             <#if register.formData.referredByCode?? && register.formData.referredByCode?has_content >
               <input id="referredByCode" name="referredByCode1" type="text"
-                     disabled  class="heysign-content-disabled"
+                     disabled class="heysign-content-disabled"
                      value="${(register.formData.referredByCode!'')}"/>
               <input name="referredByCode" type="hidden"
                      value="${(register.formData.referredByCode!'')}"/>
@@ -104,6 +112,7 @@
             </#if>
         </div>
       </div>
+      <div class="heysign-divider"></div>
       <div id="register-agreement-section" class="register-agreement">
         <div class="register-agreement-select">
           <div class="register-agreement-checkbox"
@@ -164,76 +173,79 @@
           <span>${msg("heysign-validation-require-accept")}</span>
         </div>
       </div>
-      <div id="register-button" class="heysign-button"
-      >
-        <span>${msg("register-button")}</span>
-      </div>
-      <div class="register-login-text">
-        <span>${msg("register-login-msg")}</span>
-      </div>
-      <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
-        <span>${msg("register-login-link")}</span>
-      </div>
-      <div class="heysign-content-or margin-bottom-10">
-        <div class="heysign-content-or-divider">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-footer">
+        <div class="register-login-text">
+          <span>${msg("register-login-msg")}</span>
         </div>
-        <div class="heysign-content-or-text">
-          <span>or</span>
+        <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
+          <span>${msg("register-login-link")}</span>
         </div>
-        <div class="heysign-content-or-divider">
+        <div id="register-button" class="heysign-button margin-left-330">
+          <span>${msg("register-button")}</span>
         </div>
       </div>
-        <#if realm.password && social.providers??>
-          <div class="heysign-login-social-link-group">
-              <#list social.providers as p>
-                  <#if p.alias == "google">
+      <div class="heysign-divider"></div>
+      <div class="heysign-login-social-links">
+          <#if realm.password && social.providers??>
+            <div class="heysign-login-social-link-group">
+                <#list social.providers as p>
+                    <#if p.alias == "google">
                       <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
                            onclick="goToUrl('${p.loginUrl}')">
-                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                        </div>
+                        <div class="heysign-login-social-link-text">
+                          <span>${msg("login-social-${p.alias}")}</span>
+                        </div>
                       </div>
-                      <div class="heysign-login-social-link-text">
-                        <span>${msg("login-social-${p.alias}")}</span>
-                      </div>
-                    </div>
-                  </#if>
-              </#list>
-              <#list social.providers as p>
-                  <#if p.alias == "kakao">
-                    <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
-                         onclick="goToUrl('${p.loginUrl}')">
-                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
-                      </div>
-                      <div class="heysign-login-social-link-text">
-                        <span>${msg("login-social-${p.alias}")}</span>
-                      </div>
-                    </div>
-                  </#if>
-              </#list>
-              <#list social.providers as p>
-                  <#if p.alias == "naver">
+                      <div class="heysign-flex-br"></div>
+                    </#if>
+                </#list>
+                <#list social.providers as p>
+                    <#if p.alias == "kakao">
                       <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
                            onclick="goToUrl('${p.loginUrl}')">
-                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                        </div>
+                        <div class="heysign-login-social-link-text">
+                          <span>${msg("login-social-${p.alias}")}</span>
+                        </div>
                       </div>
-                      <div class="heysign-login-social-link-text">
-                        <span>${msg("login-social-${p.alias}")}</span>
+                      <div class="heysign-flex-br"></div>
+                    </#if>
+                </#list>
+                <#list social.providers as p>
+                    <#if p.alias == "naver">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                        </div>
+                        <div class="heysign-login-social-link-text">
+                          <span>${msg("login-social-${p.alias}")}</span>
+                        </div>
                       </div>
-                    </div>
-                  </#if>
-              </#list>
-<#--              <#list social.providers as p>-->
-              <#--                    <#if p.alias == "facebook">-->
-              <#--                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">-->
-<#--                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">-->
-<#--                      </div>-->
-<#--                      <div class="heysign-login-social-link-text">-->
-<#--                        <span>${msg("login-social-${p.alias}")}</span>-->
-<#--                      </div>-->
-<#--                    </div>-->
-<#--                  </#if>-->
-<#--              </#list>-->
-          </div>
-        </#if>
+                      <div class="heysign-flex-br"></div>
+                    </#if>
+                </#list>
+                <#--              <#list social.providers as p>-->
+                <#--                    <#if p.alias == "facebook">-->
+                <#--                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">-->
+                <#--                      <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">-->
+                <#--                      </div>-->
+                <#--                      <div class="heysign-login-social-link-text">-->
+                <#--                        <span>${msg("login-social-${p.alias}")}</span>-->
+                <#--                      </div>-->
+                <#--                    </div>-->
+                <#--            <div class="heysign-flex-br"></div>-->
+                <#--                  </#if>-->
+                <#--              </#list>-->
+            </div>
+          </#if>
+      </div>
     </div>
   </form>
 </@layout.registrationLayout>

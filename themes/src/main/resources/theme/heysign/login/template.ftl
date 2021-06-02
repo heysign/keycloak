@@ -681,7 +681,11 @@
         </#if>
         <#nested "form">
     </div>
-
+    <div class="heysign-footer">
+      <div class="heysign-footer-copyright">
+        <span>${msg("heysign-footer-copypright")}</span>
+      </div>
+    </div>
   </div>
   </body>
   </html>

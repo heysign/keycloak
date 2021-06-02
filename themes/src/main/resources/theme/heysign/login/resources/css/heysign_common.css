@@ -64,9 +64,42 @@
   font-stretch: normal;
 }
 
+
+@font-face {
+  font-family: AppleSDGothicNeoB;
+  src: url('../font/asdgothicneo/AppleSDGothicNeoB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoEB;
+  src: url('../font/asdgothicneo/AppleSDGothicNeoEB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoL;
+  src: url('../font/asdgothicneo/AppleSDGothicNeoL.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeoR;
+  src: url('../font/asdgothicneo/AppleSDGothicNeoR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
 body {
-  background-color: #f9fafd !important;
-  font-family: NanumSquareOTFB, sans-serif !important;
+  font-family: AppleSDGothicNeoR, sans-serif !important;
+  background-color: #1d2022 !important;
   font-size: 12px;
   font-stretch: normal;
   font-style: normal;
@@ -76,12 +109,11 @@ body {
 
 .heysign-main .alert {
   padding: 0;
+  top: 100px;
   position: absolute; /* or absolute */
-  left: 50%;
-  top: 50px;
-  /*width: 280px;*/
-  margin-left: 0;
-  font-family: NanumSquareOTFB, sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -107,82 +139,58 @@ body {
 }
 
 .heysign-main .alert-error {
-  background-color: #ffffff !important;
+  background-color: #bbbbbb !important;
   border: none !important;
-  color: #a0141b !important;
+  color: #ffffff !important;
 }
 
 .heysign-main .alert-success {
-  background-color: #ffffff !important;
+  background-color: #ff7057 !important;
   border: none !important;
-  color: #ff593b !important;
+  color: #ffffff !important;
 }
 
 .heysign-main .alert-warning {
-  background-color: #ffffff !important;
+  background-color: #222222 !important;
   border: none !important;
-  color: #bdbdbd !important;
+  color: #ffffff !important;
 }
 
 .heysign-main {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .heysign-main .heysign-content-footer{
-  padding: 0;
-  position: absolute; /* or absolute */
-  align-content: baseline;
-  left: 50%;
-  bottom: 22px;
-  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
-@media (min-width:450px) {
-  .heysign-main .heysign-content-footer{
-    margin-left: -197px;
-  }
-}
-@media (max-width:450px){
-  .heysign-main .heysign-content-footer{
-    margin-left: -117px;
-  }
-}
-@media (max-width:450px){
-  .heysign-content-wrapper {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-}
-@media (min-width:450px) {
-  .heysign-content-wrapper {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+.heysign-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .heysign-header {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  height: 20px;
-  margin-left: calc(50% - 149px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: #2f343e;
 }
 
 .heysign-header-img {
-  width: 300px;
-  height: 80px;
+  width: 223px;
+  height: 31px;
   object-fit: contain;
   background: url("../img/heysign-logo.svg") no-repeat center center;
 }
@@ -200,34 +208,26 @@ body {
 }
 
 .heysign-form {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-@media (max-width:450px){
-  .heysign-content {
-    display: inline-block;
-    margin-left: calc(50% - 170px);
-    vertical-align: top;
-    width: 340px;
-    box-shadow: 0 0 9px 0 #cfd3e4;
-    background-color: #ffffff;
-    padding: 50px 51px;
-  }
-}
-@media (min-width:450px){
-  .heysign-content {
-    display: inline-block;
-    margin-left: calc(50% - 250px);
-    vertical-align: top;
-    width: 500px;
-    box-shadow: 0 0 9px 0 #cfd3e4;
-    background-color: #ffffff;
-    padding: 50px 51px;
-  }
+.heysign-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
 }
 
+.heysign-flex-br{
+  display: flex;
+  width: 100%;
+  height: 0;
+}
 
 .margin-top-20 {
   margin-top: 20px;
@@ -252,6 +252,18 @@ body {
 .margin-left-50{
   margin-left: 50px;
 }
+.margin-left-165{
+  margin-left: 165px;
+}
+.margin-left-240{
+  margin-left: 240px;
+}
+.margin-left-330{
+  margin-left: 330px;
+}
+.margin-left-336{
+  margin-left: 336px;
+}
 
 .margin-bottom-10{
   margin-bottom: 10px;
@@ -263,35 +275,101 @@ body {
   margin-bottom: 30px;
 }
 
+.heysign-divider{
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 20px 0;
+}
+
 .heysign-content-title {
-  font-family: NanumSquareOTFEB, sans-serif;
-  font-size: 26px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.21;
+  letter-spacing: -1.02px;
   text-align: left;
-  color: #000000;
+  color: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .heysign-content-subtitle {
-  margin: 10px 0;
-  font-family: NanumSquareOTFB, sans-serif;
-  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.21;
+  letter-spacing: -1.02px;
   text-align: left;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.heysign-content-input-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.heysign-content-input-label {
+  width: 107px;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 5;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #656d80;
+}
+
+.heysign-content-input-description{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  font-size: 15px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.57;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.heysign-content-input-label {
-  font-size: 12px;
-  color: #000000;
+  line-height: 5;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #656d80;
+  margin-left: 130px;
 }
 
 .heysign-content-input-text {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #000000;
+  padding: 0;
+  border-radius: 3px;
+  border: solid 1px #000000;
+  background-color: #191a1a;
+  width: 443px;
+  height: 50px;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.33;
+  letter-spacing: -0.6px;
+  text-align: left;
+  color: #888888;
 }
 
 .heysign-content-input-text input:-webkit-autofill,
@@ -300,37 +378,26 @@ body {
 .heysign-content-input-text input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
   -webkit-transition: background-color 9999s ease-out;
-  -webkit-box-shadow: 0 0 0 1000px #f0f2f9 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #191a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
-
-@media (max-width:450px){
-  .heysign-content-input-text input {
-    width: 240px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #f0f2f9;
-    border: none;
-    padding: 3px 20px;
-  }
-}
-@media (min-width:450px) {
-  .heysign-content-input-text input {
-    width: 400px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #f0f2f9;
-    border: none;
-    padding: 3px 20px;
-  }
+.heysign-content-input-text input {
+  width: 100%;
+  height: 100%;
+  background-color: #191a1a;
+  color: #ffffff !important;
+  border: none;
+  padding: 3px 20px;
 }
 .heysign-content-input-text input:focus {
   text-decoration: none;
+  color: #ffffff !important;
   outline: none;
   border: none;
 }
 
 .heysign-content-input-text input::placeholder {
-  font-family: NanumSquareOTFEB, sans-serif;
+  color: #888888;
 }
 
 .heysign-content-disabled{
@@ -344,29 +411,28 @@ body {
   width: 100%;
 }
 
+
 .heysign-button-disabled{
-  border: solid 1px #e6e9f1 !important;
-  background-color: #d9d9d9 !important;
+  background-color: #bbbbbb !important;
 }
 
 .heysign-button-disabled span{
-  color: #bcbcbc !important;
+  color: #ffffff !important;
 }
 
 .heysign-button {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   border-radius: 2px;
-  background-color: #ff593b;
-  margin-top: 40px;
-  text-align: center;
-  padding: 17px 0;
+  padding: 16px 20px 15px 20px;
+  background-color: #ff7057;
 }
 
 .heysign-button span {
-  width: 44px;
+  width: auto;
+  white-space: nowrap;
   height: 16px;
   font-family: NanumSquareOTFEB, sans-serif;
   font-size: 16px;
@@ -416,15 +482,17 @@ body {
 }
 
 .heysign-link-text {
-  height: 14px;
-  font-family: NanumSquareOTFB, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  height: 19px;
+  font-size: 15px;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 0.88;
-  letter-spacing: normal;
-  color: #000000;
+  line-height: 1;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #656d80;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .heysign-link-text:hover {
@@ -432,7 +500,7 @@ body {
 }
 
 .heysign-link-text span {
-  border-bottom: solid 2px #000000;
+  border-bottom: solid 1px #656d80;
 }
 
 input[type=password] {
@@ -445,7 +513,7 @@ input[type=password] {
   width: 16px;
   height: 8px;
   object-fit: contain;
-  background: url("../img/dropbox-btn-default.svg") no-repeat center center;
+  background: url("../img/dropbox-btn-dark.svg") no-repeat center center;
 }
 
 .dropdown-clicked {
@@ -454,7 +522,7 @@ input[type=password] {
   width: 16px;
   height: 8px;
   object-fit: contain;
-  background: url("../img/dropbox-btn-clicked.svg") no-repeat center center;
+  background: url("../img/dropbox-btn-clicked-dark.svg") no-repeat center center;
 }
 
 .heysign-content-hide{
@@ -468,7 +536,7 @@ input[type=password] {
 }
 
 .heysign-content-weak {
-  color: #d0021b;
+  color: red;
 }
 
 .heysign-content-normal {
@@ -480,7 +548,7 @@ input[type=password] {
 }
 
 .heysign-error {
-  border: solid 1px #a0141b !important;
+  border: solid 1px #ff7057 !important;
 }
 
 .heysign-error-text {
@@ -496,7 +564,6 @@ input[type=password] {
 }
 
 .heysign-info-text {
-  font-family: NanumSquareOTFB, sans-serif;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -517,14 +584,13 @@ input[type=password] {
   vertical-align: top;
   position: relative;
   float: right;
-  margin-top: -25px;
+  margin-top: -29px;
   margin-right: 20px;
 }
 
 .heysign-content .heysign-password-strength-text {
   display: inline-block;
   vertical-align: top;
-  font-family: NanumSquareOTFB, sans-serif;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -532,13 +598,12 @@ input[type=password] {
   line-height: 1.17;
   letter-spacing: normal;
   text-align: right;
-  color: #000000;
+  color: #ffffff;
 }
 
 .heysign-content .heysign-password-strength-value {
   display: inline-block;
   vertical-align: top;
-  font-family: NanumSquareOTFEB, sans-serif;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -547,4 +612,27 @@ input[type=password] {
   letter-spacing: normal;
   text-align: right;
   margin-left: 10px;
+}
+
+.heysign-footer{
+  border-top: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 50px;
+  padding: 16px 20px 15px 20px;
+  background-color: #1d2022;
+}
+.heysign-footer .heysign-footer-copyright{
+  width: 100px;
+  height: 19px;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.93;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #656d80;
 }
