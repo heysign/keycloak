@@ -2,19 +2,26 @@
 <@layout.registrationLayout; section>
     <script>
         function inputValueChange(value){
+            var submitElement = document.getElementById('submitDiv');
+            // console.log(submitElement);
+            // console.log(submitElement.classList);
             if (buttonEnabled()){
-                document.getElementById('submitDiv').classList.remove("heysign-content-disabled");
+                submitElement.classList.remove("heysign-content-disabled");
             } else {
-                document.getElementById('submitDiv').classList.add("heysign-content-disabled");
+                submitElement.classList.add("heysign-content-disabled");
             }
+            // console.log(submitElement.classList);
         }
         function buttonEnabled(){
             var nameValue = document.getElementById('name').value;
             var mobilePhoneNumberValue = document.getElementById('mobilePhoneNumber').value;
-            if (nameValue !== undefined && nameValue !== null && nameValue.length > 0 &&
-                    mobilePhoneNumberValue !== undefined && mobilePhoneNumberValue !== null && mobilePhoneNumberValue.length > 0){
+            // console.log(nameValue, mobilePhoneNumberValue);
+            if (nameValue && nameValue.length > 0 &&
+                    mobilePhoneNumberValue && mobilePhoneNumberValue.length > 0){
+                // console.log('buttonEnabled true');
                 return true;
             } else {
+                // console.log('buttonEnabled false');
                 return false;
             }
         }
@@ -65,7 +72,7 @@
                 <div class="heysign-link-text heysign-content-footer-login" onclick="goToUrl('${url.loginUrl}')">
                     <span>${msg("heysign-go-back-to-login-link")}</span>
                 </div>
-                <div id="submitDiv" class="heysign-button heysign-button-disabled margin-left-336" onclick="validateAndSubmit('kc-find-email-form')">
+                <div id="submitDiv" class="heysign-button heysign-content-disabled margin-left-336" onclick="validateAndSubmit('kc-find-email-form')">
                     <span>${msg("find-email-button")}</span>
                 </div>
             </div>

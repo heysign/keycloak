@@ -4,7 +4,8 @@
     <div class="heysign-content-title">
         ${msg("expired-content-title")}
     </div>
-    <div class="heysign-content-footer">
+    <div class="heysign-divider"></div>
+    <div class="heysign-content-footer margin-bottom-20">
       <div class="heysign-link-text heysign-content-ib-vt" onclick="goToUrl('${url.loginRestartFlowUrl}')">
         <span>${msg("pageExpiredMsg1")}</span>
       </div>

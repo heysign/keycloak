@@ -3,14 +3,6 @@
 
 }
 
-.heysign-content-register .heysign-content-title {
-  width: 210px;
-  display: inline-block;
-  vertical-align: top;
-}
-.heysign-content-register .heysign-button {
-}
-
 .heysign-content-register .register-login-text {
   display: flex;
   justify-content: flex-start;

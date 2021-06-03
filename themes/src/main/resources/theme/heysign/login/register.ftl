@@ -181,7 +181,7 @@
         <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
           <span>${msg("register-login-link")}</span>
         </div>
-        <div id="register-button" class="heysign-button margin-left-330">
+        <div id="register-button" class="heysign-button margin-left-316">
           <span>${msg("register-button")}</span>
         </div>
       </div>

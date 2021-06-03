@@ -1,12 +1,11 @@
 .heysign-content-verify-email {
+  width: 400px;
 }
 
-.heysign-content-verify-email .heysign-content-subtitle {
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.43;
-  letter-spacing: normal;
-  color: #000000;
+.heysign-content-verify-email .heysign-content-footer{
+  justify-content: flex-end;
+}
+
+.heysign-content-verify-email .heysign-content-subtitle{
+  display: inline-block;
 }

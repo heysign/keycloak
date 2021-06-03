@@ -57,7 +57,7 @@
              onclick="goToUrl('${url.loginUrl}')">
           <span>${msg("heysign-go-back-to-login-link")}</span>
         </div>
-        <div id="submitDiv" class="heysign-button heysign-button-disabled margin-left-240"
+        <div id="submitDiv" class="heysign-button heysign-content-disabled margin-left-240"
              onclick="validateAndSubmit('kc-reset-password-form')">
           <span>${msg("reset-password-button")}</span>
         </div>

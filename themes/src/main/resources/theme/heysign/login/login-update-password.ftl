@@ -14,8 +14,9 @@
           <div class="heysign-content-title">
               ${msg("update-password-content-title")}
           </div>
-          <div class="heysign-content-input-group margin-top-30">
-              <div class="heysign-content-input-label">
+          <div class="heysign-divider"></div>
+          <div class="heysign-content-input-group">
+              <div class="heysign-content-input-label margin-left-20">
                   <span>${msg("update-password-content-new-password")}</span>
                   <span class="update-password-content-new-password-description">${msg("update-password-content-new-password-description")}</span>
               </div>
@@ -34,8 +35,9 @@
                   </div>
               </div>
           </div>
-          <div class="heysign-content-input-group margin-top-20">
-              <div class="heysign-content-input-label">
+          <div class="heysign-divider"></div>
+          <div class="heysign-content-input-group">
+              <div class="heysign-content-input-label margin-left-20">
                   <span>${msg("update-password-content-new-confirm-password")}</span>
               </div>
               <div class="heysign-content-input-text">
@@ -45,13 +47,14 @@
                          onchange="validatePassword(this)"/>
               </div>
           </div>
-          <div class="heysign-button" onclick="clickSubmit('kc-passwd-update-form')">
-              <span>${msg("update-password-button")}</span>
-          </div>
       </div>
-      <div class="heysign-content-footer">
+      <div class="heysign-divider"></div>
+      <div class="heysign-content-footer margin-bottom-20">
           <div class="heysign-link-text heysign-content-footer-login" onclick="goToUrl('${url.loginUrl}')">
               <span>${msg("heysign-go-back-to-login-link")}</span>
+          </div>
+          <div class="heysign-button margin-left-336" onclick="clickSubmit('kc-passwd-update-form')">
+              <span>${msg("update-password-button")}</span>
           </div>
       </div>
   </form>
