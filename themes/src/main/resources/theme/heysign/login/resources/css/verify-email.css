@@ -9,3 +9,12 @@
 .heysign-content-verify-email .heysign-content-subtitle{
   display: inline-block;
 }
+
+@media (max-width: 450px) {
+  .heysign-content-reset-password .heysign-content-footer .heysign-content-footer-left{
+    width: calc(50% - 10px) !important;
+  }
+  .heysign-content-reset-password .heysign-content-footer .heysign-content-footer-right{
+    width: calc(50% - 10px) !important;
+  }
+}
