@@ -13,8 +13,13 @@
       <#--    </div>-->
     <div class="heysign-divider"></div>
     <div class="heysign-content-footer margin-bottom-20">
-      <div id="verify-email-button" class="heysign-button" onclick="goToUrl('${url.loginAction}')">
-        <span>${msg("verify-email-link")}</span>
+      <div class="heysign-content-footer-left">
+      </div>
+      <div class="heysign-content-footer-right">
+        <div id="verify-email-button" class="heysign-button"
+             onclick="goToUrl('${url.loginAction}')">
+          <span>${msg("verify-email-link")}</span>
+        </div>
       </div>
     </div>
   </div>

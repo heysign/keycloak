@@ -2,6 +2,15 @@
 .heysign-content-login {
 }
 
+@media (max-width: 450px) {
+  .heysign-content-login .heysign-content-footer .heysign-content-footer-left{
+    width: 100% !important;
+  }
+  .heysign-content-login .heysign-content-footer .heysign-content-footer-right{
+    width: 100% !important;
+    margin-top: 20px;
+  }
+}
 
 .heysign-login-social-links {
   display: flex;

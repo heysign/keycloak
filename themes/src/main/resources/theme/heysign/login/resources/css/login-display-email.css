@@ -2,3 +2,7 @@
 .heysign-content-display-email {
   width: 500px;
 }
+
+.heysign-content-display-email .heysign-content-footer{
+  height: 50px;
+}

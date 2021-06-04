@@ -53,13 +53,17 @@
       </div>
       <div class="heysign-divider"></div>
       <div class="heysign-content-footer margin-bottom-20">
-        <div class="heysign-link-text heysign-content-footer-login"
-             onclick="goToUrl('${url.loginUrl}')">
-          <span>${msg("heysign-go-back-to-login-link")}</span>
+        <div class="heysign-content-footer-left">
+          <div class="heysign-link-text heysign-content-footer-login"
+               onclick="goToUrl('${url.loginUrl}')">
+            <span>${msg("heysign-go-back-to-login-link")}</span>
+          </div>
         </div>
-        <div id="submitDiv" class="heysign-button heysign-content-disabled margin-left-240"
-             onclick="validateAndSubmit('kc-reset-password-form')">
-          <span>${msg("reset-password-button")}</span>
+        <div class="heysign-content-footer-right">
+          <div id="submitDiv" class="heysign-button heysign-content-disabled"
+               onclick="validateAndSubmit('kc-reset-password-form')">
+            <span>${msg("reset-password-button")}</span>
+          </div>
         </div>
       </div>
     </div>

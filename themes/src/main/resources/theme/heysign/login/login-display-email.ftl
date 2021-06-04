@@ -13,16 +13,20 @@
     </div>
     <div class="heysign-divider"></div>
     <div class="heysign-content-footer margin-bottom-20">
-      <div class="heysign-link-text " onclick="goToUrl('${url.loginUrl}')">
-        <span>${msg("heysign-go-back-to-login-link")}</span>
+      <div class="heysign-content-footer-left">
+        <div class="heysign-link-text " onclick="goToUrl('${url.loginUrl}')">
+          <span>${msg("heysign-go-back-to-login-link")}</span>
+        </div>
       </div>
-        <#if email?? >
-          <div id="resetPassword" class="heysign-button margin-left-140"
-               onclick="goToUrl('${url.loginResetCredentialsUrl}')">
-            <span>${msg("reset-password-button")}</span>
-          </div>
-        </#if>
+      <div class="heysign-content-footer-right">
+          <#if email?? >
+            <div id="resetPassword" class="heysign-button"
+                 onclick="goToUrl('${url.loginResetCredentialsUrl}')">
+              <span>${msg("reset-password-button")}</span>
+            </div>
+          </#if>
       </div>
     </div>
+  </div>
   </div>
 </@layout.registrationLayout>

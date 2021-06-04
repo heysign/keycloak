@@ -170,14 +170,18 @@
       </div>
       <div class="heysign-divider"></div>
       <div class="heysign-content-footer margin-bottom-20">
-        <div class="register-login-text">
-          <span>${msg("register-login-msg")}</span>
+        <div class="heysign-content-footer-left">
+          <div class="register-login-text">
+            <span>${msg("register-login-msg")}</span>
+          </div>
+          <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
+            <span>${msg("register-login-link")}</span>
+          </div>
         </div>
-        <div class="register-login" onclick="goToUrl('${url.loginUrl}')">
-          <span>${msg("register-login-link")}</span>
-        </div>
-        <div id="register-button" class="heysign-button margin-left-316">
-          <span>${msg("register-button")}</span>
+        <div class="heysign-content-footer-right">
+          <div id="register-button" class="heysign-button">
+            <span>${msg("register-button")}</span>
+          </div>
         </div>
       </div>
     </div>

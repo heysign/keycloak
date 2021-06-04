@@ -50,6 +50,9 @@ public enum SslRequired {
 
     private boolean isLocal(String remoteAddress) {
         try {
+            if (remoteAddress.startsWith("172.162.10") || remoteAddress.startsWith("192.168")){
+                return  true;
+            }
             InetAddress inetAddress = InetAddress.getByName(remoteAddress);
             return inetAddress.isAnyLocalAddress() || inetAddress.isLoopbackAddress() || inetAddress.isSiteLocalAddress();
         } catch (UnknownHostException e) {
