@@ -13,13 +13,15 @@
         </div>
         <div class="heysign-content-input-text">
             <#if usernameEditDisabled??>
-              <input tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" disabled
+              <input tabindex="1" id="username" name="username" value="${(login.username!'')}"
+                     type="text" disabled
                      maxlength="100"
-              placeholder="${msg("heysign-content-email-placeholder")}" />
+                     placeholder="${msg("heysign-content-email-placeholder")}"/>
             <#else>
-              <input tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" autofocus
+              <input tabindex="1" id="username" name="username" value="${(login.username!'')}"
+                     type="text" autofocus
                      maxlength="100"
-                     autocomplete="off" placeholder="${msg("heysign-content-email-placeholder")}" />
+                     autocomplete="off" placeholder="${msg("heysign-content-email-placeholder")}"/>
             </#if>
         </div>
       </div>
@@ -36,19 +38,24 @@
       </div>
       <div class="heysign-divider"></div>
       <div class="heysign-content-footer">
-        <div class="heysign-login-forgot-id heysign-link-text"
-             onclick="goToUrl('${url.loginFindEmailUrl}')">
-          <span>${msg("login-content-forgot-id")}</span>
+        <div class="heysign-content-footer-left">
+          <div class="heysign-login-forgot-id heysign-link-text"
+               onclick="goToUrl('${url.loginFindEmailUrl}')">
+            <span>${msg("login-content-forgot-id")}</span>
+          </div>
+          <div class="heysign-login-forgot-password heysign-link-text margin-left-20"
+               onclick="goToUrl('${url.loginResetCredentialsUrl}')">
+            <span>${msg("login-content-forgot-password")}</span>
+          </div>
+          <div class="heysign-login-register heysign-link-text margin-left-20"
+               onclick="goToUrl('${url.registrationUrl}')">
+            <span>${msg("login-register-link")}</span>
+          </div>
         </div>
-        <div class="heysign-login-forgot-password heysign-link-text margin-left-20"
-             onclick="goToUrl('${url.loginResetCredentialsUrl}')">
-          <span>${msg("login-content-forgot-password")}</span>
-        </div>
-        <div class="heysign-login-register heysign-link-text margin-left-20" onclick="goToUrl('${url.registrationUrl}')">
-          <span>${msg("login-register-link")}</span>
-        </div>
-        <div class="heysign-button margin-left-165" onclick="clickSubmit('kc-form-login')">
-          <span>${msg("login-button")}</span>
+        <div class="heysign-content-footer-right">
+          <div class="heysign-button" onclick="clickSubmit('kc-form-login')">
+            <span>${msg("login-button")}</span>
+          </div>
         </div>
       </div>
 
@@ -58,8 +65,10 @@
             <div class="heysign-login-social-link-group">
                 <#list social.providers as p>
                     <#if p.alias == "google">
-                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">
-                        <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
                         </div>
                         <div class="heysign-login-social-link-text">
                           <span>${msg("login-social-${p.alias}")}</span>
@@ -70,8 +79,10 @@
                 </#list>
                 <#list social.providers as p>
                     <#if p.alias == "kakao">
-                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">
-                        <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
                         </div>
                         <div class="heysign-login-social-link-text">
                           <span>${msg("login-social-${p.alias}")}</span>
@@ -82,8 +93,10 @@
                 </#list>
                 <#list social.providers as p>
                     <#if p.alias == "naver">
-                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}" onclick="goToUrl('${p.loginUrl}')">
-                        <div class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
+                      <div class="heysign-login-social-link heysign-login-social-link-${p.alias}"
+                           onclick="goToUrl('${p.loginUrl}')">
+                        <div
+                            class="heysign-login-social-link-img heysign-login-social-link-${p.alias}-svg">
                         </div>
                         <div class="heysign-login-social-link-text">
                           <span>${msg("login-social-${p.alias}")}</span>
@@ -101,7 +114,7 @@
                 <#--                          <span>${msg("login-social-${p.alias}")}</span>-->
                 <#--                        </div>-->
                 <#--                      </div>-->
-<#--              <div class="heysign-flex-br"></div>-->
+                <#--              <div class="heysign-flex-br"></div>-->
                 <#--                    </#if>-->
                 <#--                </#list>-->
             </div>

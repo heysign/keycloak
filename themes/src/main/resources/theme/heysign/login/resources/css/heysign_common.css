@@ -157,9 +157,9 @@ body {
 }
 
 .heysign-main {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -167,9 +167,26 @@ body {
 }
 .heysign-main .heysign-content-footer{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+}
+
+.heysign-main .heysign-content-footer .heysign-content-footer-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  width: calc(65% - 10px);
+}
+.heysign-main .heysign-content-footer .heysign-content-footer-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+  width: calc(35% - 10px);
 }
 .heysign-content-wrapper {
   display: flex;
@@ -214,13 +231,31 @@ body {
   width: 100%;
 }
 
+@media (max-width: 450px) {
+  .heysign-main form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .heysign-content {
+    width: 100%;
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media (min-width: 450px) {
+  .heysign-content {
+    width: 600px;
+  }
+}
+
 .heysign-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 600px;
 }
 
 .heysign-flex-br{
@@ -252,11 +287,17 @@ body {
 .margin-left-50{
   margin-left: 50px;
 }
+.margin-left-140{
+  margin-left: 140px;
+}
 .margin-left-165{
   margin-left: 165px;
 }
 .margin-left-240{
   margin-left: 240px;
+}
+.margin-left-316{
+  margin-left: 316px;
 }
 .margin-left-330{
   margin-left: 330px;
@@ -305,14 +346,14 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 900;
   font-stretch: normal;
   font-style: normal;
   line-height: 2.21;
   letter-spacing: -1.02px;
   text-align: left;
-  color: #ffffff;
+  color: #888888;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -326,6 +367,9 @@ body {
   flex-direction: row;
 }
 .heysign-content-input-label {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 107px;
   font-size: 15px;
   font-weight: bold;
@@ -333,7 +377,6 @@ body {
   font-style: normal;
   line-height: 5;
   letter-spacing: -0.45px;
-  text-align: left;
   color: #656d80;
 }
 
@@ -349,9 +392,21 @@ body {
   font-style: normal;
   line-height: 5;
   letter-spacing: -0.45px;
-  text-align: left;
   color: #656d80;
   margin-left: 130px;
+}
+
+@media (max-width: 450px) {
+  .heysign-content-input-text {
+    width: 100%;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 450px) {
+  .heysign-content-input-text {
+    width: 443px;
+  }
 }
 
 .heysign-content-input-text {
@@ -359,7 +414,6 @@ body {
   border-radius: 3px;
   border: solid 1px #000000;
   background-color: #191a1a;
-  width: 443px;
   height: 50px;
   margin-left: 10px;
   font-size: 15px;
@@ -401,24 +455,13 @@ body {
 }
 
 .heysign-content-disabled{
-  border-radius: 20px !important;
-  border: solid 1px #e6e9f1 !important;
-  background-color: rgba(247, 248, 251, 0.54) !important;
-}
-
-.heysign-content-disabled input{
-  color: #acb0bb !important;
-  width: 100%;
-}
-
-
-.heysign-button-disabled{
   background-color: #bbbbbb !important;
 }
 
-.heysign-button-disabled span{
+.heysign-content-disabled input{
   color: #ffffff !important;
 }
+
 
 .heysign-button {
   display: flex;
@@ -428,6 +471,7 @@ body {
   border-radius: 2px;
   padding: 16px 20px 15px 20px;
   background-color: #ff7057;
+  min-width: 86px;
 }
 
 .heysign-button span {
@@ -531,7 +575,7 @@ input[type=password] {
 .margin-top-155{
   margin-top: 155px !important;
 }
-.heysign-content-blue {
+.heysign-content-highlight {
   color: #ff593b;
 }
 

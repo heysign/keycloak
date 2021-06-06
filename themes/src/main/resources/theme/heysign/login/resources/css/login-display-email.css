@@ -1,25 +1,8 @@
 
 .heysign-content-display-email {
-
+  width: 500px;
 }
 
-.heysign-content-display-email .heysign-content-subtitle{
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.22;
-  letter-spacing: normal;
-  color: #000000;
-}
-
-.heysign-content-display-email #resetPassword{
-  width: 215px !important;
-}
-
-.heysign-content-display-email #login{
-  width: 170px !important;
-  margin-left: 10px;
+.heysign-content-display-email .heysign-content-footer{
+  height: 50px;
 }

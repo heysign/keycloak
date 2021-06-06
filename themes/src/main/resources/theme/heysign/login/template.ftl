@@ -414,13 +414,13 @@
           console.log('registerButton checkValid',isValid1,isValid2,isValid3,isValid4,isValid5,isValid6,isValid7,isValid8,isValid9);
           if (isValid1 && isValid2 && isValid3 && isValid4 && isValid5 && isValid5 && isValid6
               && isValid7 && isValid8 && isValid9) {
-            registerButton?.classList.remove('heysign-button-disabled');
+            registerButton?.classList.remove('heysign-content-disabled');
 
             // console.error(isValid1, isValid2, isValid3, isValid4, isValid5, isValid5, isValid6
             //     , isValid7, isValid8, isValid9);
             return true;
           } else {
-            registerButton?.classList.add('heysign-button-disabled');
+            registerButton?.classList.add('heysign-content-disabled');
             // console.warn(isValid1, isValid2, isValid3, isValid4, isValid5, isValid5, isValid6
             //     , isValid7, isValid8, isValid9);
             return false;
