@@ -387,10 +387,22 @@
         const phoneNumberErrorSpan = createSpanElement('휴대폰 번호가 유효하지 않습니다.');
         const companyErrorSpan = createSpanElement('첫 단어에 공백이 포함될 수 없습니다.');
         const refCodeErrorSpan = createSpanElement('첫 단어에 공백이 포함될 수 없습니다.');
-        let isValid1 = REGEX_EMAIL.test($('#email')[0].value); // email
-        let isValid2 = !!$('#password')[0].value; // pwd
-        let isValid3 = REGEX_NAME.test($('#name')[0].value); // name
-        let isValid4 = REGEX_PHONE_NUMBER.test($('#mobilePhoneNumber')[0].value); // phone
+        let isValid1 = false;
+        if ($('#email')[0]){
+          isValid1 = REGEX_EMAIL.test($('#email')[0].value);  // email
+        }
+        let isValid2 = false;
+        if ($('#password')[0]){
+          isValid2 = !!$('#password')[0].value; // pwd
+        }
+        let isValid3 = false;
+        if ($('#name')[0]){
+          isValid3 = REGEX_NAME.test($('#name')[0].value); // name
+        }
+        let isValid4 = false;
+        if ($('#mobilePhoneNumber')[0]){
+          isValid4 = REGEX_PHONE_NUMBER.test($('#mobilePhoneNumber')[0].value); // phone
+        }
         let isValid5 = true;  // company
         let isValid6 = true;  // ref Code
         let isValid7 = false; // service
