@@ -223,32 +223,33 @@
             lowerCaseAlphabetExists, upperCaseAlphabetExists, specialCharacterExists,
             lengthGreaterThanSeven);
 
-        if (!inputPassword || inputPassword.length < 1) {
-          document.getElementById('heysign-password-strength-group').classList.add(
-              "heysign-content-hide");
+        var passwordStrengthGroupElement = document.getElementById('heysign-password-strength-group');
+        if (passwordStrengthGroupElement && (!inputPassword || inputPassword.length < 1)) {
+          passwordStrengthGroupElement.classList.add("heysign-content-hide");
         } else {
-          document.getElementById('heysign-password-strength-group').classList.remove(
-              "heysign-content-hide");
+          passwordStrengthGroupElement.classList.remove("heysign-content-hide");
         }
         var spanElement = document.getElementById('heysign-password-strength-value-span');
-        if (validCount >= 3 && lengthGreaterThanSeven === true) {
-          spanElement.classList.remove("heysign-content-weak");
-          spanElement.classList.remove("heysign-content-normal");
-          spanElement.classList.remove("heysign-content-strong");
-          spanElement.classList.add("heysign-content-strong");
-          spanElement.innerHTML = "${msg("heysign-password-strength-strong")}";
-        } else if (validCount === 2 && lengthGreaterThanSeven === true) {
-          spanElement.classList.remove("heysign-content-weak");
-          spanElement.classList.remove("heysign-content-normal");
-          spanElement.classList.remove("heysign-content-strong");
-          spanElement.classList.add("heysign-content-normal");
-          spanElement.innerHTML = "${msg("heysign-password-strength-normal")}";
-        } else {
-          spanElement.classList.remove("heysign-content-weak");
-          spanElement.classList.remove("heysign-content-normal");
-          spanElement.classList.remove("heysign-content-strong");
-          spanElement.classList.add("heysign-content-weak");
-          spanElement.innerHTML = "${msg("heysign-password-strength-weak")}";
+        if (spanElement) {
+          if (validCount >= 3 && lengthGreaterThanSeven === true) {
+            spanElement.classList.remove("heysign-content-weak");
+            spanElement.classList.remove("heysign-content-normal");
+            spanElement.classList.remove("heysign-content-strong");
+            spanElement.classList.add("heysign-content-strong");
+            spanElement.innerHTML = "${msg("heysign-password-strength-strong")}";
+          } else if (validCount === 2 && lengthGreaterThanSeven === true) {
+            spanElement.classList.remove("heysign-content-weak");
+            spanElement.classList.remove("heysign-content-normal");
+            spanElement.classList.remove("heysign-content-strong");
+            spanElement.classList.add("heysign-content-normal");
+            spanElement.innerHTML = "${msg("heysign-password-strength-normal")}";
+          } else {
+            spanElement.classList.remove("heysign-content-weak");
+            spanElement.classList.remove("heysign-content-normal");
+            spanElement.classList.remove("heysign-content-strong");
+            spanElement.classList.add("heysign-content-weak");
+            spanElement.innerHTML = "${msg("heysign-password-strength-weak")}";
+          }
         }
         return validCount;
       }
