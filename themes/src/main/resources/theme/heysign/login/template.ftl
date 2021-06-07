@@ -224,10 +224,12 @@
             lengthGreaterThanSeven);
 
         var passwordStrengthGroupElement = document.getElementById('heysign-password-strength-group');
-        if (passwordStrengthGroupElement && (!inputPassword || inputPassword.length < 1)) {
-          passwordStrengthGroupElement.classList.add("heysign-content-hide");
-        } else {
-          passwordStrengthGroupElement.classList.remove("heysign-content-hide");
+        if (passwordStrengthGroupElement){
+          if (!inputPassword || inputPassword.length < 1) {
+            passwordStrengthGroupElement.classList.add("heysign-content-hide");
+          } else {
+            passwordStrengthGroupElement.classList.remove("heysign-content-hide");
+          }
         }
         var spanElement = document.getElementById('heysign-password-strength-value-span');
         if (spanElement) {
