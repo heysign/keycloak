@@ -46,7 +46,7 @@
         <div class="heysign-content-input-text">
           <input id="email" name="username" type="text"
                  autocomplete="email"
-                 maxlength="100"
+                 maxlength="300"
                  autofocus onchange="emailOnChange(event.target.value)"
                  placeholder="${msg("heysign-content-email-placeholder")}"/>
         </div>

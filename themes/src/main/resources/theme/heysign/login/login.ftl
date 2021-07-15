@@ -15,12 +15,12 @@
             <#if usernameEditDisabled??>
               <input tabindex="1" id="username" name="username" value="${(login.username!'')}"
                      type="text" disabled
-                     maxlength="100"
+                     maxlength="300"
                      placeholder="${msg("heysign-content-email-placeholder")}"/>
             <#else>
               <input tabindex="1" id="username" name="username" value="${(login.username!'')}"
                      type="text" autofocus
-                     maxlength="100"
+                     maxlength="300"
                      autocomplete="off" placeholder="${msg("heysign-content-email-placeholder")}"/>
             </#if>
         </div>
@@ -32,7 +32,7 @@
         </div>
         <div class="heysign-content-input-text">
           <input tabindex="2" id="password" name="password" type="password" autocomplete="off"
-                 maxlength="12"
+                 maxlength="100"
                  placeholder="${msg("heysign-content-password-placeholder")}"/>
         </div>
       </div>

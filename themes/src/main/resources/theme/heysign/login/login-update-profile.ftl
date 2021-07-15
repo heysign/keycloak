@@ -45,7 +45,7 @@
               <input id="email" name="email1" type="hidden" value=""/>
               <input id="naverId" name="naverId" type="text"
                      value="${(naverId!user.naverId!'')}"
-                     maxlength="50"
+                     maxlength="300"
                      placeholder="${msg("heysign-content-naver-id-placeholder")}"/>
             </div>
           </div>
@@ -58,7 +58,7 @@
         <div class="heysign-content-input-text">
           <input id="name" name="name" type="text"
                  value="${(name!user.name!'')}"
-                 maxlength="50"
+                 maxlength="200"
                  placeholder="${msg("heysign-content-name-placeholder")}"/>
         </div>
       </div>
@@ -70,7 +70,7 @@
         <div class="heysign-content-input-text">
           <input id="mobilePhoneNumber" name="mobilePhoneNumber" type="text"
                  autocomplete="mobilePhoneNumber"
-                 maxlength="20"
+                 maxlength="100"
                  value="${(mobilePhoneNumber!user.mobilePhoneNumber!'')}"
                  placeholder="${msg("heysign-content-mobile-phone-number-placeholder")}"/>
         </div>
@@ -83,7 +83,7 @@
         <div class="heysign-content-input-text">
           <input id="company" name="company" type="text"
                  autocomplete="company"
-                 maxlength="100"
+                 maxlength="200"
                  value="${(company!user.company!'')}"
                  placeholder="${msg("heysign-content-company-placeholder")}"/>
         </div>

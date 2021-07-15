@@ -27,7 +27,7 @@
           <input id="password-new" name="password-new" type="password" autofocus
                  autocomplete="new-password"
                  placeholder="${msg("heysign-content-password-placeholder")}"
-                 maxlength="12"
+                 maxlength="100"
                  onchange="validatePassword(this)"/>
           <div id="heysign-password-strength-group"
                class="heysign-password-strength heysign-content-hide">
@@ -49,7 +49,7 @@
           <input id="password-confirm" name="password-confirm" type="password"
                  autocomplete="new-password"
                  placeholder="${msg("heysign-content-confirm-password-placeholder")}"
-                 maxlength="12"
+                 maxlength="100"
                  onchange="validatePassword(this)"/>
         </div>
       </div>

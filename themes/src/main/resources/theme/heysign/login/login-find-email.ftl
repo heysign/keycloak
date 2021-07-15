@@ -49,7 +49,7 @@
         <div class="heysign-content-input-text">
           <input id="name" name="name" type="text"
                  autocomplete="name"
-                 maxlength="50"
+                 maxlength="300"
                  autofocus onchange="inputValueChange(event.target.value)"
                  value="${(name!'')}"
                  placeholder="${msg("heysign-content-name-placeholder")}"/>
@@ -63,7 +63,7 @@
         <div class="heysign-content-input-text">
           <input id="mobilePhoneNumber" name="mobilePhoneNumber" type="text"
                  autocomplete="mobilePhoneNumber"
-                 maxlength="20"
+                 maxlength="100"
                  onchange="inputValueChange(event.target.value)"
                  value="${(mobilePhoneNumber!'')}"
                  placeholder="${msg("heysign-content-mobile-phone-number-placeholder")}"/>

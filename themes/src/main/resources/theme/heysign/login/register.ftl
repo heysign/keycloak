@@ -24,7 +24,7 @@
           <input id="email" name="email" type="text"
                  autocomplete="email"
                  value="${(register.formData.email!'')}"
-                 maxlength="30"
+                 maxlength="300"
                  placeholder="${msg("heysign-content-email-placeholder")}"/>
         </div>
       </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="heysign-content-input-text">
           <input id="password" name="password" type="password" autocomplete="new-password"
-                 maxlength="12"
+                 maxlength="100"
                  placeholder="${msg("heysign-content-password-placeholder")}"
           />
           <input id="password-confirm" name="password-confirm" type="hidden"/>
@@ -63,7 +63,7 @@
         <div class="heysign-content-input-text">
           <input id="name" name="name" type="text"
                  value="${(register.formData.name!'')}"
-                 maxlength="15"
+                 maxlength="200"
                  placeholder="${msg("heysign-content-name-placeholder")}"/>
         </div>
       </div>
@@ -76,7 +76,7 @@
           <input id="mobilePhoneNumber" name="mobilePhoneNumber" type="text"
                  autocomplete="mobilePhoneNumber"
                  value="${(register.formData.mobilePhoneNumber!'')}"
-                 maxlength="13"
+                 maxlength="100"
                  placeholder="${msg("heysign-content-mobile-phone-number-placeholder")}"/>
         </div>
       </div>
@@ -88,7 +88,7 @@
         <div class="heysign-content-input-text">
           <input id="company" name="company" type="text"
                  autocomplete="off"
-                 maxlength="15"
+                 maxlength="200"
                  value="${(register.formData.company!'')}"
                  placeholder="${msg("heysign-content-company-placeholder")}"/>
         </div>
